@@ -1,0 +1,44 @@
+@import '../../../settings/05-mixins';
+@import '../../../settings/01-variables';
+
+.most_popular_posts {
+	margin-top: 40px;
+	ul {
+		margin-bottom: 0!important;
+		margin-left: 0!important;
+		border: 2px solid $main-color;
+		border-radius: 10px;
+		padding: 6px 20px;
+		li {
+			padding: 7px 0 7px 22px;
+			line-height: 1.2;
+
+			&:after {
+				content: '';
+				width: 10px;
+				height: 10px;
+				top: 10px;
+				left: 0;
+				position: absolute;
+				display: block;
+				border: 2px solid $main-color;
+				border-radius: 50%;
+			}
+
+			&:before {
+				width: 4px;
+				height: 4px;
+				top: 15px;
+				left: 5px;
+				border-radius: 50%;
+				background-color: $main-color!important;
+			}
+		}
+	}
+
+	a {
+		font-size: 14px;
+		font-weight: 700;
+		color: $main-color;
+	}
+}

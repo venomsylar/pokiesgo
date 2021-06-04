@@ -1,0 +1,58 @@
+$containers: ("": 1156, "_second": 960, "_third": 1700);
+$font-color: #1f2236;
+$main-color: #490365;
+$color1: #F4B617;
+$color2: #051233;
+$color3: #626262;
+$placeholder-color: #333333;
+$input-height: 40px;
+$font-base: 16px;
+$font-base-responsive: 14px;
+$font-weight: 400;
+$main-font: "SourceSansPro";
+$second-font: "SuisseIntl";
+$icons: "icons";
+/*Stars*/
+$star-width: 100px;
+$star-height: 18px;
+
+/*Z-index list*/
+$z-index: (
+	'.browser_update_alert': 99999,
+	'header': 2000,
+	'#privacy': 1050,
+	'#main_menu': 1500,
+	'.has_noindex_tag:after': 1000,
+	'#main_menu .sub-menu': 100,
+	'body::before': -900,
+	'body.shadow::before': 900,
+	'.select-options': 100,
+	'.fullframe': 0,
+	'#to_top a': 1400
+);
+/*Icons List*/
+$icons-list: (
+	"c-fb" : "\61", "c-in" : "\63", "c-vk" : "\62", "c-pt" : "\45", "c-tw" : "\50", "c-yb" : "\53", "c-gp" : "\69", "c-inst" : "\58",
+	"chevron-down" : "\64", "chevron-left" : "\66", "chevron-right" : "\67", "chevron-up" : "\68",
+	"angle-left" : "\71", "angle-right" : "\72", "angle-up" : "\73", "angle-down" : "\70",
+	"arrow-down" : "\74", "arrow-left" : "\75", "arrow-right" : "\76", "arrow-up" : "\77",
+	"long-arrow-down" : "\79", "long-arrow-left" : "\7a", "long-arrow-right" : "\41", "long-arrow-up" : "\42",
+	"star-half-o" : "\49", "star-o" : "\4a", "star-1" : "\4b",
+	"quote-left" : "\44", "quote-right" : "\46",
+	"heart-o" : "\3b", "heart" : "\3c",
+	"phone-square" : "\43",
+	"phone" : "\6a",
+	"search" : "\6f",
+	"check" : "\59",
+	"marker" : "\31",
+	"mail" : "\32",
+	"photo" : "\34",
+	"comments" : "\6c",
+	"calendar" : "\55",
+	"tags" : "\56",
+	"thumbs-up" : "\2d",
+	"filter" : "\2f",
+	"chat" : "\3e",
+	"file-pdf-o" : "\5d",
+	"link" : "\60",
+);

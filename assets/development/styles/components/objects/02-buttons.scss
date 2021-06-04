@@ -1,0 +1,173 @@
+/*Buttons*/
+@import '../settings/05-mixins';
+@import '../settings/01-variables';
+
+%button {
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	outline: none !important;
+	box-shadow: 0 0 1px 1px transparent;
+
+	&:focus {
+		box-shadow: 0 0 1px 1px rgba(#333, .5);
+	}
+}
+
+.button, .button2, .button3 {
+	@include media-breakpoint-up(1025) {
+		font-size: $font-base;
+	}
+	@include media-breakpoint-down(1024.98) {
+		font-size: $font-base-responsive;
+	}
+	line-height: 1.3;
+	color: #fff;
+	border-radius: 4px;
+	border: 1px solid $color1;
+	padding: 10px rem(18);
+	background: $color1;
+	font-weight: 700;
+	font-family: $main-font;
+	text-transform: uppercase;
+	@extend %button;
+}
+
+.anim {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+
+	&:before {
+		position: relative;
+		content: '';
+		display: block;
+		margin-top: 100%;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 50%;
+	}
+}
+
+
+.button {
+	color: #fff;
+	padding: 9px rem(18);
+	background: $color1;
+	width: 190px;
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 5;
+	em {
+		font-style: normal;
+	}
+	&:hover {
+		.anim {
+			animation: anim-out 0.75s;
+
+			&:after {
+				animation: anim-out-pseudo 0.75s;
+			}
+		}
+	}
+}
+
+.button2 {
+	color: $color1;
+	padding: 5px rem(12);
+	background: #fff;
+
+	&:hover {
+		color: #ffffff;
+		background: $color1;
+	}
+}
+
+.button3 {
+	color: #fff;
+	padding: 9px rem(18);
+	background: $color3;
+	border: 1px solid $color3;
+
+	&:hover {
+		color: $color1;
+		//background: #fff;
+	}
+}
+
+//Expand table & Slots
+.for_button {
+	text-align: center;
+
+	a {
+		font-size: 16px;
+		font-weight: 700;
+		color: $font-color;
+		line-height: 1;
+		position: relative;
+		padding-right: 25px;
+		text-decoration: underline;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			top: 4px;
+			right: 0;
+			background-image: url("images/arrow-pointing-to-right.svg");
+		}
+	}
+}
+
+.inline_button {
+	@extend .button;
+	margin-bottom: 20px;
+}
+
+
+@include keyframes(anim-in) {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@include keyframes(anim-in-pseudo) {
+	0% {
+		background: rgba(#fff, 0.25);
+	}
+	100% {
+		background: rgba(#fff, 0);
+	}
+}
+
+@include keyframes(anim-out) {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@include keyframes(anim-out-pseudo) {
+	0% {
+		background: rgba(#fff, 0.25);
+	}
+	100% {
+		background: rgba(#fff, 0);
+	}
+}

@@ -1,0 +1,1 @@
+import '../../styles/components/layout/404/404.scss';

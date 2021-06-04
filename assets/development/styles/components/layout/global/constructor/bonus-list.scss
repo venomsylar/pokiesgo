@@ -1,0 +1,337 @@
+@import '../../../settings/05-mixins';
+@import '../../../settings/01-variables';
+
+.casino_bonuses_list {
+	&.with_top_3 {
+		.casino_bonus_item_name {
+			display: none;
+		}
+	}
+
+	@include media-breakpoint-up(600) {
+		padding: 20px 0;
+	}
+	@include media-breakpoint-down(599.98) {
+		padding: 10px 0;
+	}
+
+	.container_second {
+		@include media-breakpoint-between(480, 767.98) {
+			width: 560px;
+		}
+		@include media-breakpoint-down(479.98) {
+			width: 380px;
+		}
+	}
+
+	.casino_bonus_item {
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid rgba($main-color, 0.5);
+		background: #FFFFFF;
+		box-shadow: 2px 2px 15px rgba(40, 0, 56, 0.15);
+		border-radius: 10px;
+		position: relative;
+		@include transition();
+
+		&:hover {
+			background: rgba($main-color, 0.04);
+
+			.circled_position:before {
+				background: transparent;
+			}
+		}
+
+		& > div {
+			margin: 0 4px;
+		}
+
+		@include media-breakpoint-down(767.98) {
+			& > div {
+				margin: 0 6px;
+			}
+		}
+	}
+
+	&.top_3 {
+		padding-top: 10px;
+		h2 {
+			padding-bottom: 10px;
+		}
+		.casino_bonuses_list_headings {
+			font-size: 12px;
+			font-weight: 600;
+			display: flex;
+			color: #ffffff;
+			text-align: center;
+			padding: 2.5px 10px 2.5px 15px;
+			background: $main-color;
+			border-top-right-radius: 4px;
+			border-top-left-radius: 4px;
+		}
+
+		.casino_bonuses_list_position_heading {
+			flex-basis: 20px;
+		}
+
+		.casino_bonuses_list_name_heading {
+			flex-basis: 60px;
+			margin-left: 10px!important;
+		}
+
+		.casino_bonuses_list_bonus_heading {
+			flex: 1 1 0;
+		}
+
+		.casino_bonuses_list_button_heading {
+			flex-basis: 84px;
+		}
+
+		.container, .container_second {
+			max-width: 100%;
+		}
+
+		.casino_bonus_item {
+			padding: 6.5px 10px 6.5px 15px;
+			margin: 10px 0;
+			& > div {
+				margin: 0;
+			}
+		}
+
+		.casino_bonus_item_position {
+			flex-basis: 20px;
+			font-size: 14px;
+			font-weight: 600;
+
+			.circled_position {
+				line-height: 1;
+
+				&:after {
+					width: 20px;
+					height: 20px;
+				}
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+		.casino_bonus_item_info {
+			padding: 0;
+		}
+
+		.casino_bonus_item_image {
+			flex-basis: 60px;
+			margin-left: 10px!important;
+		}
+
+		.casino_bonus_item_button {
+			text-align: center;
+			flex-basis: 84px;
+			margin: 0;
+
+			.button {
+				font-size: 14px;
+				padding: 5px 6px;
+			}
+		}
+	}
+
+	&.full {
+		.casino_bonus_item {
+			margin: 5px 0;
+		}
+		.casino_bonus_item_position {
+			margin: 0 !important;
+			flex-basis: 7.5%;
+			@include media-breakpoint-up(768) {
+				font-size: 16px;
+			}
+			@include media-breakpoint-down(767.98) {
+				font-size: 14px;
+				padding-left: 14px;
+				.circled_position:before {
+					background: transparent;
+				}
+				.circled_position:after {
+					width: 20px;
+					height: 20px;
+				}
+			}
+			font-weight: 600;
+
+			span {
+				line-height: 78px;
+			}
+
+		}
+		.casino_bonus_item_image {
+			padding: 10px 0;
+			@include media-breakpoint-up(960) {
+				flex-basis: 16.6%;
+			}
+			@include media-breakpoint-down(959.98) {
+				flex-basis: 17.6%;
+			}
+
+			img {
+				width: 130px;
+			}
+
+			button {
+				display: inline-block;
+				vertical-align: middle;
+				background: none;
+				border: none;
+				@include transition();
+				@include hover {
+					opacity: .7;
+				}
+			}
+		}
+	}
+
+	.casino_bonus_item_image {
+		button {
+			display: inline-block;
+			vertical-align: middle;
+			background: none;
+			border: none;
+			@include transition();
+			@include hover {
+				opacity: .7;
+			}
+		}
+	}
+
+	.casino_bonus_item_name {
+		@include media-breakpoint-up(960) {
+			flex-basis: 19.8%;
+		}
+		@include media-breakpoint-between(768, 959.98) {
+			flex-basis: 19.8%;
+		}
+		@include media-breakpoint-between(680, 767.98) {
+			flex-basis: 19.8%;
+		}
+		@include media-breakpoint-down(679.98) {
+			display: none;
+		}
+
+		a {
+			color: $font-color;
+		}
+
+		> strong {
+			@include media-breakpoint-up(960) {
+				font-size: 14px;
+			}
+			@include media-breakpoint-between(768, 959.98) {
+				font-size: 14px;
+			}
+			@include media-breakpoint-down(767.98) {
+				font-size: 12px;
+			}
+			line-height: 1.2;
+			display: block;
+		}
+	}
+
+	.casino_bonus_item_name, .casino_bonus_item_info {
+		line-height: 1;
+		padding: 15px 5px;
+
+		> span {
+			font-size: 12px;
+			color: $font-color;
+		}
+	}
+
+	.casino_bonus_item_info {
+		flex: 1 1 0;
+		position: relative;
+		color: $main-color;
+
+		> strong {
+			@include media-breakpoint-up(960) {
+				font-size: 16px;
+			}
+			@include media-breakpoint-between(768, 959.98) {
+				font-size: 16px;
+			}
+			@include media-breakpoint-down(767.98) {
+				font-size: 14px;
+			}
+			line-height: 1.2;
+			display: block;
+		}
+
+		@include media-breakpoint-down(479.98) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			span {
+				font-size: 0;
+				visibility: hidden;
+			}
+			strong {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.casino_bonus_item_additional_info {
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		z-index: -100;
+		left: 0;
+		top: 105%;
+		font-size: 12px;
+		background: #fff;
+		padding: 10px;
+		box-shadow: 0 0 1px #333;
+
+		p {
+			padding-bottom: 0;
+		}
+	}
+
+	&.full .casino_bonus_item_button {
+		text-align: center;
+		padding: 18px 2% 18px 5px;
+		@include media-breakpoint-up(960) {
+			flex-basis: 23%;
+		}
+		@include media-breakpoint-between(480, 959.98) {
+			flex-basis: 28%;
+		}
+		@include media-breakpoint-down(479.98) {
+			flex-basis: 32%;
+			.button {
+				padding: 4px;
+			}
+		}
+
+		.button {
+			width: 100%;
+		}
+	}
+
+	.show_info {
+		cursor: pointer;
+
+		&:hover {
+			& + .casino_bonus_item_additional_info {
+				visibility: visible;
+				opacity: 1;
+				z-index: 100;
+			}
+		}
+	}
+}

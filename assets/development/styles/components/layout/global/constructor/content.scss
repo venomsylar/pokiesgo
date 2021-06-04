@@ -1,0 +1,161 @@
+@import '../../../settings/05-mixins';
+@import '../../../settings/01-variables';
+
+.content_block {
+	padding: rem(20) 0;
+
+	.content_button {
+		font-size: 16px;
+		color: $main-color;
+		display: inline-block;
+		font-weight: 800;
+		cursor: pointer;
+	}
+
+	.content_block_first_part {
+		p:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+
+	.content_block_second_part {
+		&.hidden {
+			height: 0;
+			width: 0;
+			opacity: 0;
+			z-index: -1;
+			position: relative;
+			visibility: hidden;
+
+			* {
+				font-size: 0 !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+		}
+	}
+
+	p > img {
+		margin: 40px auto 20px auto;
+	}
+
+	table {
+		border: 1px solid rgba($main-color, 0.2);
+		box-shadow: 2px 2px 15px rgba(128, 142, 184, 0.15);
+		margin-bottom: 20px;
+		margin-top: 10px;
+		border-collapse: separate!important;
+		border-radius: 8px;
+		overflow-x: auto;
+
+		strong {
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		td {
+			word-break: break-all;
+			@include media-breakpoint-up(768) {
+				font-size: 16px;
+			}
+			@include media-breakpoint-down(767.98) {
+				font-size: 14px;
+			}
+		}
+
+		ul {
+			margin: 0 !important;
+			li {
+				line-height: 1;
+				padding: 3px 0 3px 15px;
+				margin-bottom: 0;
+				&:before {
+					top: 9px;
+					left: 4px;
+				}
+			}
+		}
+
+		tr {
+			&:not(:last-child):not(:first-child) {
+				td {
+					&:not(:last-child) {
+						border-right: 1px solid rgba($main-color, 0.2);
+					}
+				}
+			}
+
+			&:not(:last-child) {
+				td {
+					&:not(:last-child):not(:first-child) {
+						border-bottom: 1px solid rgba($main-color, 0.2);
+					}
+				}
+			}
+
+			&:not(:first-child) {
+				td {
+					&:first-child {
+						&:before {
+							left: 10px;
+							right: 0;
+						}
+					}
+					&:last-child {
+						&:before {
+							left: 0;
+							right: 10px;
+						}
+					}
+					&:first-child, &:last-child {
+						&:before {
+							content: '';
+							position: absolute;
+							height: 1px;
+							top: -1px;
+							bottom: 0;
+							background: rgba($main-color, 0.2);
+						}
+					}
+				}
+			}
+
+			&:first-child {
+				td {
+					&:not(:last-child) {
+						&:after {
+							content: '';
+							position: absolute;
+							width: 1px;
+							right: 0;
+							background: rgba($main-color, 0.2);
+							top: 10px;
+							bottom: 0;
+						}
+					}
+				}
+			}
+
+			&:last-child {
+				td {
+					&:not(:last-child) {
+						&:after {
+							content: '';
+							position: absolute;
+							width: 1px;
+							right: 0;
+							background: rgba($main-color, 0.2);
+							top: 0;
+							bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+
+		td {
+			padding: 10px 2%;
+			position: relative;
+		}
+	}
+}

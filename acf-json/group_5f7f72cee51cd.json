@@ -1,0 +1,1393 @@
+{
+    "key": "group_5f7f72cee51cd",
+    "title": "Constructor",
+    "fields": [
+        {
+            "key": "field_5f7f72f294cc5",
+            "label": "Constructor",
+            "name": "constructor",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5f7f732494cc6": {
+                    "key": "layout_5f7f732494cc6",
+                    "name": "content_block",
+                    "label": "Content Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f7f733294cc7",
+                            "label": "First Part (visible)",
+                            "name": "first_part_visible",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5f7f734194cc8",
+                            "label": "Second Part (hidden)",
+                            "name": "second_part_hidden",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f7f73031d521": {
+                    "key": "layout_5f7f73031d521",
+                    "name": "top_3_casino",
+                    "label": "Top 3 Casino",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f7f7d9bbac5d",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f7f813ac5d79",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Топ 3 казино - це перші 3 казино із головної таблиці. Головна таблиця наповнюється у <a href=\"\/wp-admin\/admin.php?page=acf-options-constructor\" target=\"_blank\">Theme Settings<\/a>",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f7f73830c025": {
+                    "key": "layout_5f7f73830c025",
+                    "name": "table_with_top_3",
+                    "label": "Table (with top 3)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f8893dc38f01",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_609fbfa9e245c",
+                            "label": "All Casino Link",
+                            "name": "all_casino_link",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_609fbfc2e245d",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_609fbfc8e245e",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "allow_archives": 1,
+                                    "multiple": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_609fe8af7e08a": {
+                    "key": "layout_609fe8af7e08a",
+                    "name": "table_with_filter",
+                    "label": "Table With Filter",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60a0276e631b4",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<strong color=\"red\">Виводити тільки 1 таблицю на сторінку, щоб аякс коректно відпрацьовував<\/strong>",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_609fe8af7e08b",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60a0222631e14",
+                            "label": "Use Table Type",
+                            "name": "use_table_type",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "global": "Global",
+                                "custom": "Custom"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_60a0224731e15",
+                            "label": "Custom Table",
+                            "name": "custom_table",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_60a0222631e14",
+                                        "operator": "==",
+                                        "value": "custom"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "casino"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": "",
+                            "max": "",
+                            "return_format": "id"
+                        },
+                        {
+                            "key": "field_609fe8af7e08c",
+                            "label": "All Casino Link",
+                            "name": "all_casino_link",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_609fe8af7e08d",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_609fe8af7e08e",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "allow_archives": 1,
+                                    "multiple": 0
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_60a0227531e16",
+                            "label": "Filter",
+                            "name": "filter",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60a0228131e17",
+                                    "label": "Providers",
+                                    "name": "providers",
+                                    "type": "taxonomy",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "taxonomy": "casino-provider",
+                                    "field_type": "multi_select",
+                                    "allow_null": 0,
+                                    "add_term": 1,
+                                    "save_terms": 0,
+                                    "load_terms": 0,
+                                    "return_format": "id",
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_60a0229e31e18",
+                                    "label": "Payments",
+                                    "name": "payments",
+                                    "type": "taxonomy",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "taxonomy": "casino-payment",
+                                    "field_type": "multi_select",
+                                    "allow_null": 0,
+                                    "add_term": 1,
+                                    "save_terms": 0,
+                                    "load_terms": 0,
+                                    "return_format": "id",
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_60a022bc31e19",
+                                    "label": "Sorting",
+                                    "name": "sorting",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "default": "Default",
+                                        "name": "Name",
+                                        "games_count": "Games Cout",
+                                        "newest_first": "Newest First"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5f7f739b0c026": {
+                    "key": "layout_5f7f739b0c026",
+                    "name": "table_without_top_3",
+                    "label": "Table (without top 3)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f8893d638f00",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_609fbfe6e245f",
+                            "label": "All Casino Link",
+                            "name": "all_casino_link",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_609fbfe6e2460",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_609fbfe6e2461",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "allow_archives": 1,
+                                    "multiple": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f8880c86e3a9": {
+                    "key": "layout_5f8880c86e3a9",
+                    "name": "table_custom_without_top_3",
+                    "label": "Table (custom, without top 3)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f889441a3b87",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f8880e06e3aa",
+                            "label": "Custom Table",
+                            "name": "custom_table",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "casino"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": "",
+                            "max": "",
+                            "return_format": "id"
+                        },
+                        {
+                            "key": "field_609fc00de2462",
+                            "label": "All Casino Link",
+                            "name": "all_casino_link",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_609fc00de2463",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_609fc00de2464",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "allow_archives": 1,
+                                    "multiple": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f8881b2ae2d9": {
+                    "key": "layout_5f8881b2ae2d9",
+                    "name": "providers_or_payments",
+                    "label": "Providers or Payments Accordion",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f88a81907f33",
+                            "label": "Accordion Category",
+                            "name": "accordion_category",
+                            "type": "radio",
+                            "instructions": "Акордеон із провайдерами чи пейментами наповнюється у <a href=\"\/wp-admin\/admin.php?page=acf-options-constructor\" target=\"_blank\">Theme Settings<\/a>\r\nТут можна вибрати по якій категорії виводити акордеон",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "provider": "Provider",
+                                "payment": "Payment"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f89edee7fdd5": {
+                    "key": "layout_5f89edee7fdd5",
+                    "name": "custom_accordion",
+                    "label": "Custom Accordion",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6004209cc5e9f",
+                            "label": "Use FAQ Schema",
+                            "name": "use_faq_schema",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5f89f3775a1a5",
+                            "label": "Accordion Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f89f3825a1a6",
+                            "label": "Accordion Subtitle",
+                            "name": "accordion_subtitle",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5f89edfa7fdd6",
+                            "label": "Accordion",
+                            "name": "accordion",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5f89f2587fdd7",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5f89f2657fdd8",
+                                    "label": "Info",
+                                    "name": "info",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f8881d7ae2db": {
+                    "key": "layout_5f8881d7ae2db",
+                    "name": "categories",
+                    "label": "Categories",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5fad715a25dab",
+                            "label": "Categories List",
+                            "name": "categories_list",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5fad718425dac",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5fad719f25dad",
+                                    "label": "Category",
+                                    "name": "category",
+                                    "type": "taxonomy",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "taxonomy": "casino-category",
+                                    "field_type": "select",
+                                    "allow_null": 0,
+                                    "add_term": 0,
+                                    "save_terms": 0,
+                                    "load_terms": 0,
+                                    "return_format": "object",
+                                    "multiple": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f8f443b5f913": {
+                    "key": "layout_5f8f443b5f913",
+                    "name": "table_of_content",
+                    "label": "Table of Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f9099ff9ff3c",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<strong>Таблиця контенту формується виключно через PHP (js тільки для роботи якорів)<\/strong>\r\nВона складається із заголовків <strong>h2<\/strong>, які є у філдах конструктора. ID проставляються автоматично. Якщо заголовок знаходиться у прихованому блоці (Second Part (hidden)) тоді при кліку на тайтл цей блок буде відкриватись.\r\nТаблиця контенту може бути розміщена у будь якому порядку у конструкторі.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_6085e0102880a",
+                            "label": "Left Side Text",
+                            "name": "left_side_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f9d1f7632106": {
+                    "key": "layout_5f9d1f7632106",
+                    "name": "slots",
+                    "label": "Slots",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f9d1f7e32107",
+                            "label": "Slots List",
+                            "name": "slots_list",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "casino-slots",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "object",
+                            "multiple": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5fb55988e6e30": {
+                    "key": "layout_5fb55988e6e30",
+                    "name": "all_bonus_list",
+                    "label": "All Bonus list",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5fb5599de6e31",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Виводяться усі бонуси усіх казино по порядку головної таблиці казино",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_5fbff75502533",
+                            "label": "Bonus Type",
+                            "name": "bonus_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "welcome_casino_bonus": "Welcome Bonus",
+                                "free_spins_bonus": "Free Spins Bonus",
+                                "no_deposit_casino_bonus": "No Deposit Bonus",
+                                "no_wagering_bonus": "No Wagering Bonus",
+                                "cashback_bonus": "Cashback Bonus"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "label",
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5fb559c6e6e32": {
+                    "key": "layout_5fb559c6e6e32",
+                    "name": "single_bonus",
+                    "label": "Single Bonus",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5fb55a0ae6e33",
+                            "label": "Casino",
+                            "name": "casino",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "casino"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60899899d18d8": {
+                    "key": "layout_60899899d18d8",
+                    "name": "advantages",
+                    "label": "Advantages",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_608995e4e8a0a",
+                            "label": "Advantages",
+                            "name": "advantages",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60899775e8a0b",
+                                    "label": "Advantage image",
+                                    "name": "advantage_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_608997b8e8a0c",
+                                    "label": "Advantage description",
+                                    "name": "advantage_description",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6089b78629bff": {
+                    "key": "layout_6089b78629bff",
+                    "name": "news_block",
+                    "label": "News block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6089b79629c00",
+                            "label": "News",
+                            "name": "news",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6089b7a429c01",
+                                    "label": "News_image",
+                                    "name": "news_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_6089b7bc29c02",
+                                    "label": "News_info",
+                                    "name": "news_info",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_608d80b0265a8": {
+                    "key": "layout_608d80b0265a8",
+                    "name": "author",
+                    "label": "Author",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_608d80ca265a9",
+                            "label": "Photo",
+                            "name": "photo",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_608d80dc265aa",
+                            "label": "Name",
+                            "name": "name",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_608d80e1265ab",
+                            "label": "Position",
+                            "name": "position",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_608d80ed265ac",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_609fd1c7419c1",
+                            "label": "Social Media",
+                            "name": "some",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Social Media",
+                            "sub_fields": [
+                                {
+                                    "key": "field_609fd1c7419c2",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "c-fb": "Facebook",
+                                        "c-tw": "Twitter",
+                                        "c-in": "LinkedIn",
+                                        "c-yb": "YouTube",
+                                        "c-gp": "Google+",
+                                        "c-pt": "Pinterest",
+                                        "c-inst": "Instagram"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 1,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_609fd1c7419c3",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "#",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "casino"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 99,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1621109437
+}

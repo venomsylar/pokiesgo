@@ -1,0 +1,47 @@
+@import '../settings/05-mixins';
+@import '../settings/01-variables';
+/*Rating*/
+.stars_rating {
+	width: $star-width;
+	height: $star-height;
+	background: url(../images/stars.svg) left no-repeat;
+	background-size: $star-width $star-height;
+
+	.stars_inner {
+		height: $star-height;
+		display: block;
+		background: url(../images/stars-active.svg) left no-repeat;
+		background-size: $star-width $star-height;
+	}
+}
+
+.g_rating_block {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+
+	.count_number {
+		font-size: 13px;
+		line-height: 1;
+		position: relative;
+
+		span {
+			display: inline-block;
+			line-height: 1;
+		}
+	}
+
+	.rating_count {
+		display: flex;
+		align-items: center;
+		color: rgba(#fff, .5);
+		margin-left: 5px;
+		& > span {
+			font-size: 12px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 5px;
+			line-height: 1;
+		}
+	}
+}

@@ -1,0 +1,303 @@
+@import '../../settings/05-mixins';
+@import '../../settings/01-variables';
+
+.casino_review_box {
+	margin-bottom: 35px;
+	margin-top: 40px;
+
+	em {
+		font-style: normal;
+		@include media-breakpoint-down(767.98) {
+			display: inline-block;
+		}
+		@include media-breakpoint-up(768) {
+			display: none;
+		}
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	.for_play {
+		text-align: center;
+		margin-top: 20px;
+		@include media-breakpoint-down(479.98) {
+			.button {
+				width: 100%;
+			}
+		}
+	}
+
+	.casino_review_value button {
+		font-size: 16px;
+		font-family: $main-font;
+		word-break: break-word;
+		color: $font-color;
+		background: none;
+		cursor: pointer;
+		@include transition();
+		outline: none;
+		border: none;
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+}
+
+.casino_review_box_items {
+	border: 1px solid rgba($main-color, 0.2);
+	box-shadow: 2px 2px 15px rgba(128, 142, 184, 0.15);
+	border-radius: 8px;
+	@include media-breakpoint-up(480) {
+		padding: 9px;
+	}
+}
+
+.casino_review_box_item {
+	color: $font-color;
+	position: relative;
+	line-height: 1.1;
+	@include media-breakpoint-up(1025) {
+		padding: 20px 39px;
+	}
+	@include media-breakpoint-between(480, 1024.98) {
+		padding: 10px;
+	}
+
+	@include media-breakpoint-down(479.98) {
+		.casino_review_label {
+			padding: 0 10px 10px 10px;
+		}
+		.casino_review_value {
+			padding: 0 10px;
+		}
+	}
+
+	&:first-child {
+		padding-top: 11px;
+	}
+
+	&:last-child {
+		padding-bottom: 11px;
+	}
+
+	@include media-breakpoint-down(479.98) {
+		padding-bottom: 10px;
+	}
+	@include media-breakpoint-up(480) {
+		&:before {
+			content: '';
+			position: absolute;
+			width: 1px;
+			top: -2px;
+			@include media-breakpoint-up(768) {
+				left: 285px;
+			}
+			@include media-breakpoint-between(480, 768) {
+				left: 189px;
+			}
+			bottom: 0;
+			background: rgba($main-color, .5);
+		}
+	}
+
+	&:not(:last-child) {
+		@include media-breakpoint-up(768) {
+			margin-bottom: 2px;
+		}
+		@include media-breakpoint-down(479.98) {
+			margin-bottom: 16px;
+		}
+		border-bottom: 1px solid rgba($main-color, 0.5);
+	}
+}
+
+.taxonomy_box {
+	@include media-breakpoint-down(479.98) {
+		.casino_review_label {
+			padding-bottom: 10px;
+		}
+	}
+
+	a, span {
+		@include media-breakpoint-up(768) {
+			font-size: 16px;
+		}
+		@include media-breakpoint-down(767.98) {
+			font-size: 14px;
+		}
+
+		&:nth-child(n + 11) {
+			&:not(.taxonomy_list_read_more) {
+				font-size: 0;
+				width: 0;
+				height: 0;
+				position: absolute;
+				z-index: -100;
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.casino_review_label {
+	font-size: 18px;
+	@include media-breakpoint-up(768) {
+		flex-basis: 246px;
+		margin-right: 40px;
+	}
+	@include media-breakpoint-between(480, 767.98) {
+		flex-basis: 190px;
+		margin-right: 10px;
+	}
+	font-weight: 600;
+	position: relative;
+	line-height: 1.4;
+
+	@include media-breakpoint-down(479.98) {
+		text-align: center;
+		margin-bottom: 16px;
+		&:after {
+			content: '';
+			position: absolute;
+			height: 1px;
+			bottom: 0;
+			left: 10px;
+			right: 10px;
+			background: rgba($main-color, 0.2);
+		}
+	}
+	@include media-breakpoint-up(480) {
+		align-self: flex-start;
+		padding-right: 10px;
+	}
+}
+
+.casino_review_value {
+	line-height: 1.1;
+	@include media-breakpoint-up(480) {
+		flex: 1 1 0;
+	}
+	@include media-breakpoint-up(768) {
+		font-size: 16px;
+	}
+	@include media-breakpoint-down(767.98) {
+		font-size: 14px;
+	}
+	font-family: $second-font;
+	position: relative;
+
+	[data-casino-id] {
+		font-family: $second-font;
+	}
+
+	a, span {
+		display: inline-block;
+		line-height: 1.25;
+
+		&:after {
+			content: ',';
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	a {
+		color: $font-color;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.taxonomy_list_read_more {
+		@include media-breakpoint-up(1025) {
+			font-size: 16px;
+		}
+		@include media-breakpoint-down(1024.98) {
+			font-size: 14px;
+		}
+		font-weight: 600;
+		color: $main-color;
+		cursor: pointer;
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.fancybox-stage .casino_review_value_wrap {
+	a, span {
+		&:nth-last-child(2) {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+.casino_review_value.fancybox-content {
+	padding: 48px 26px 39px 20px;
+	width: 328px;
+	max-width: 94%;
+	border: 1px solid rgba(73, 3, 101, 0.2);
+	box-shadow: 2px 2px 15px rgba(39, 50, 85, 0.1);
+	border-radius: 8px;
+
+	.taxonomy_list_read_more {
+		display: none;
+	}
+
+	.fancybox-close-small {
+		right: 5px;
+		top: 5px;
+
+		svg {
+			border: 1px solid $font-color;
+			border-radius: 50%;
+		}
+	}
+
+	.casino_review_value_wrap {
+		max-height: 353px;
+		padding-right: 12px;
+		overflow-y: auto;
+		/*Scroll*/
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			border-left: 1px solid #fff;
+			border-right: 1px solid #fff;
+			background-color: rgba($main-color, .3);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $main-color;
+			border-radius: 10px;
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background: darken($main-color, 5%);
+		}
+	}
+
+	.casino_review_value_wrap {
+		a, span {
+			font-size: 14px;
+			line-height: 1.5;
+		}
+	}
+}

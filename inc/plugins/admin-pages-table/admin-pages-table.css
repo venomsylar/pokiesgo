@@ -1,0 +1,215 @@
+.add_img_from_url:hover {
+    background: #eee !important;
+}
+
+.add_img_from_url {
+    border: none!important;
+}
+
+.add_img_from_url {
+    margin-right: 4px!important;
+}
+
+.featured_thumb {
+    font-size: 0 !important;
+}
+
+.aw_upload_image_button:active {
+    transform: translate(0)!important;
+}
+
+.featured_thumb button:first-child {
+    margin-right: 2px;
+}
+
+.featured_thumb button {
+    transition: all 0.4s ease-in-out;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    vertical-align: middle !important;
+}
+
+.add_img_from_url:focus {
+    outline: none !important;
+}
+
+.add_image_from_url_popup .flex_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.add_image_from_url_popup {
+    position: fixed;
+    width: 450px;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #eee;
+    border: 1px solid #e0e0e0;
+    color: #fff;
+    text-align: center;
+    padding: 20px 15px;
+    z-index: 159905;
+}
+.add_image_from_url_popup .error, .add_image_from_url_popup .warning {
+    font-weight: 700;
+    padding: 5px 4px;
+    margin-bottom: 10px;
+    background: #fff;
+    line-height: 1.4;
+    margin-top: 0;
+}
+.add_image_from_url_popup .error {
+    border-left: 4px solid #ff1517;
+}
+.add_image_from_url_popup .error span {
+    font-weight: 400;
+}
+.add_image_from_url_popup .warning {
+    border-left: 4px solid #ffba00;
+}
+.add_image_from_url_popup .cross {
+    color: #fff;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    cursor: pointer;
+    z-index: 159905;
+}
+
+.add_image_from_url_popup .upload_image_button {
+    flex-basis: 75px;
+}
+.add_image_from_url_popup input {
+    flex: 1 1 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.row-actions {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.column-title {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
+
+.tpl_filter_title {
+    color: #0073aa;
+    cursor: pointer;
+    float: left;
+}
+
+.admin_thumb img {
+    max-width: 100%;
+    width: auto;
+    max-height: 45px
+}
+
+.page_link a {
+    font-size: 10px;
+}
+
+.admin_thumb img[src$='.svg'] {
+    height: 45px;
+}
+
+.admin_thumb {
+    position: relative;
+    display: inline-block;
+}
+.admin_thumb .delete_thumb {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: -15px;
+    top: -5px;
+    line-height: 1;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    background: rgba(255, 20, 22, 0.67);
+}
+.admin_thumb .delete_thumb:hover {
+    opacity: .85;
+}
+td {
+    vertical-align: middle !important
+}
+
+.add_img_from_url,.aw_upload_image_button {
+    width: 28px;
+    height: 28px;
+    font-size: 17px;
+    outline: none!important;
+    color: #333!important;
+    transition: all 0.4s ease;
+    position: relative;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.add_img_from_url:hover,.aw_upload_image_button:hover {
+    opacity: .7;
+}
+.add_img_from_url:before,.aw_upload_image_button:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 1;
+}
+.add_img_from_url {
+    border: 1px solid rgba(145, 145, 145, 0.6)!important;
+    background: rgba(145, 145, 145, 0.1) !important;
+}
+
+.aw_upload_image_button {
+    border: 1px solid rgba(145, 145, 145, 0.9)!important;
+    background: rgba(145, 145, 145, 0.4) !important;
+}
+
+.add_img_from_url.active {
+    color: #ffffff!important;
+    background: #28a745 !important;
+}
+
+.post_tag em:nth-child(odd) {
+    color: #333333;
+}
+.post_tag em:not(:last-child):after {
+    content: ', ';
+}
+.post_tag em:nth-child(even) {
+    color: rgb(170, 128, 128);
+}
+
+.post_status {
+    font-size: 28px;
+    color: rgba(255, 20, 22, 0.67);
+}
+.post_status.green {
+    color: #28a745;
+}
+
+.pp_shadow:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 360px;
+    background: rgb(0, 0, 0);
+    opacity: .7;
+    z-index: 159900;
+}

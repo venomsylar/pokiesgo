@@ -1,0 +1,66 @@
+@import '../../../settings/05-mixins';
+@import '../../../settings/01-variables';
+
+.casino_categories_links {
+	padding: rem(20) 0;
+	ul {
+		@include media-breakpoint-up(426) {
+			padding: rem(35) 1%;
+			text-align: center;
+		}
+		@include media-breakpoint-down(425.98) {
+			padding: rem(30) 5% rem(20);
+			text-align: left;
+		}
+		background: $main-color;
+		list-style-type: none;
+		margin: 0!important;
+		border-radius: 10px;
+		li {
+			@include media-breakpoint-up(426) {
+				display: inline-block;
+				margin: 0 1.1%;
+				@include left-right-margin;
+			}
+			@include media-breakpoint-down(425.98) {
+				margin: 0 1.1% 10px;
+				display: block;
+			}
+			font-size: rem(16);
+			padding: 2px 0 4px 18px;
+
+			a {
+				@include media-breakpoint-up(426) {
+					text-decoration: underline;
+
+				}
+				color: #fff;
+				font-weight: 700;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				display: block;
+				top: 50%;
+				left: 4px;
+				background: #fff;
+				transform: translateY(-50%);
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				border: 1px solid #fff;
+				display: block;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}

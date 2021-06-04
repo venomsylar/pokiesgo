@@ -1,0 +1,135 @@
+@import "../../settings/01-variables";
+@import "../../settings/05-mixins";
+
+footer {
+	font-size: 14px;
+	font-weight: 300;
+	color: #ffffff;
+	padding: 25px 0;
+	background: $font-color;
+	flex-shrink: 0;
+
+	.footer_images {
+		@include media-breakpoint-up(1025) {
+			padding: 18px 3.9% 18px 0;
+			flex-basis: 226px;
+		}
+		@include media-breakpoint-between(480, 1024.98) {
+			padding: 18px 0;
+			margin: 0 auto;
+		}
+
+		img {
+			margin: 0 20px 20px 0;
+			&:last-of-type {
+				margin-bottom: 10px;
+			}
+			&:nth-child(3) {
+				margin-right: 0;
+			}
+			&:not(:last-child) {
+				display: inline-block;
+			}
+		}
+		@include media-breakpoint-down(479.98) {
+			text-align: center;
+			padding: 0;
+			margin-bottom: 15px;
+			img {
+				margin: 0 40px 30px 0;
+				&:nth-child(3) {
+					margin-right: 0;
+				}
+				&:last-child {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+	.copy {
+		text-align: center;
+		@include last-p;
+		padding: 15px 0;
+	}
+	.footer_top {
+		@include media-breakpoint-up(480) {
+			@include flex;
+		}
+		@include media-breakpoint-between(480,1024.98) {
+			flex-wrap: wrap;
+		}
+	}
+	.footer_info {
+		@include media-breakpoint-up(1025) {
+			flex-basis: 22.4%;
+		}
+		@include media-breakpoint-between(480,1024.98) {
+			flex: 1 1 0;
+		}
+		@include media-breakpoint-down(479.98) {
+			margin-bottom: 20px;
+		}
+		@include last-p;
+
+		.logo {
+			@include media-breakpoint-up(480) {
+				margin: 0 15px 0 0;
+			}
+			@include media-breakpoint-between(0,479.98) {
+				img {
+					margin: 0 auto 10px;
+				}
+			}
+			img {
+				width: 150px;
+			}
+		}
+	}
+	.footer_menus {
+		@include media-breakpoint-up(480) {
+			display: flex;
+			justify-content: space-between;
+			.footer_menu {
+				flex-basis: 31.5%;
+			}
+		}
+		@include media-breakpoint-between(0,479.98) {
+			text-align: center;
+			margin-bottom: 30px;
+			.footer_menu:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			li {
+				margin-bottom: 7px;
+			}
+		}
+		@include media-breakpoint-up(1025) {
+			flex-basis: 49.8%;
+		}
+		@include media-breakpoint-between(480,1024.98) {
+			flex-basis: 100%;
+			margin-top: 20px;
+		}
+		.h5 {
+			font-size: 16px;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+		}
+		ul {
+			margin: 0;
+		}
+		li {
+			line-height: 1.5;
+			font-weight: 300;
+			span {
+				cursor: default;
+			}
+			a {
+				color: #ffffff;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+@import '../../settings/05-mixins';
+@import '../../settings/01-variables';
+
+#languageMenu {
+	@include media-breakpoint-up(1025) {
+		flex-basis: 56px;
+	}
+	@include media-breakpoint-down(1024.98) {
+		flex-basis: 46px;
+		margin-right: 20px;
+	}
+	margin-left: 15px;
+	position: relative;
+	align-self: center;
+	line-height: 1;
+	text-align: center;
+	.activeItem {
+		cursor: pointer;
+		display: inline-block;
+		@include transition();
+		&:hover {
+			opacity: .8;
+		}
+	}
+	img {
+		@include media-breakpoint-up(1025) {
+			width: 36px;
+		}
+		@include media-breakpoint-down(1024.98) {
+			width: 26px;
+		}
+		margin-left: auto;
+		margin-right: auto;
+	}
+	a {
+		display: inline-block;
+		&:hover {
+			opacity: .7;
+		}
+	}
+	li {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	ul {
+		visibility: hidden;
+		opacity: 0;
+		z-index: -10;
+		position: absolute;
+		@include transition();
+		transform: translateY(-10%);
+		background: $font-color;
+		padding: 10px;
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			z-index: 100;
+			transform: translateX(0);
+		}
+	}
+}

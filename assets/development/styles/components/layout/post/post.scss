@@ -1,0 +1,39 @@
+@import '../../settings/05-mixins';
+@import '../../settings/01-variables';
+
+#post {
+	h1 {
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: left;
+	}
+	.table.without_payments {
+		h2 {
+			text-align: left;
+		}
+	}
+	main {
+		.container {
+			max-width: 100%;
+		}
+	}
+	.post_rating span {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+
+	.stars_rating {
+		width: 106px;
+		height: 18px;
+		background: url(../images/stars-type2.svg) left no-repeat;
+		background-size: 106px 18px;
+
+		.stars_inner {
+			height: 18px;
+			display: block;
+			background: url(../images/stars-type2-active.svg) left no-repeat;
+			background-size: 106px 18px;
+		}
+	}
+}

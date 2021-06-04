@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import "05-mixins";
+@import "01-variables";
+
+//icons
+@include font-face('icons', '../fonts/icons', normal, normal);
+@include font-face('SourceSansPro', '../fonts/SourceSansPro-Light', 300, normal);
+@include font-face('SourceSansPro', '../fonts/SourceSansPro-Regular', 400, normal);
+@include font-face('SourceSansPro', '../fonts/SourceSansPro-Semibold', 600, normal);
+@include font-face('SourceSansPro', '../fonts/SourceSansPro-Bold', 700, normal);
+@include font-face('SourceSansPro', '../fonts/SourceSansPro-Black', 900, normal);
+@include font-face('SuisseIntl', '../fonts/SuisseIntl', 400, normal);
+
+[data-icon]:before {
+	font-family: $icons !important;
+	content: attr(data-icon);
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="i-"]:before,
+[class*=" i-"]:before {
+	font-family: $icons !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@each $name, $glyph in $icons-list {
+	.i-#{$name}:before {
+		content: $glyph;
+	}
+}

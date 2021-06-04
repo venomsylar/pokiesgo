@@ -1,0 +1,63 @@
+@import '../settings/05-mixins';
+@import '../settings/01-variables';
+/*Privacy block*/
+#privacy {
+	color: #ffffff;
+	font-size: 12px;
+	position: fixed;
+	width: 100%;
+	@include position(false, 0, 0, 0);
+	display: none;
+	background: rgba(#333, .95);
+	@include transition();
+
+	&.hide {
+		transform: translateY(100%);
+	}
+
+	@include media-breakpoint-up(1025) {
+		padding: 15px 0;
+	}
+	@include media-breakpoint-down(1024.98) {
+		padding: 10px 0;
+	}
+
+	p {
+		padding-bottom: 0;
+	}
+
+	.container {
+		padding-right: 15px;
+	}
+
+	.privacy_close {
+		@include rectangle(15px);
+		display: block;
+		position: absolute;
+		@include position(0, 0, false, false);
+		cursor: pointer;
+		@include hover {
+			&:after, &:before {
+				background: $main-color;
+			}
+		}
+
+		&:after, &:before {
+			content: '';
+			width: 15px;
+			height: 2px;
+			position: absolute;
+			@include position(6px, 0, false, false);
+			background: #ffffff;
+			@include transition();
+		}
+
+		&:before {
+			transform: rotate(-45deg);
+		}
+
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+}

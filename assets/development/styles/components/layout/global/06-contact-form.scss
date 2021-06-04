@@ -1,0 +1,148 @@
+@import '../../settings/05-mixins';
+@import '../../settings/01-variables';
+
+.page-template-tpl-contacts {
+	h1 {
+		text-transform: uppercase;
+		text-align: left;
+		padding-bottom: 0;
+	}
+
+	@include media-breakpoint-down(1024.98) {
+		.flex_parent {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		h1, .wpcf7 {
+			position: absolute;
+			width: 100%;
+		}
+		h1 {
+			top: 0;
+		}
+		.wpcf7 {
+			top: 30px;
+		}
+
+	}
+	@include media-breakpoint-between(768, 1024.98) {
+		aside {
+			padding-top: 430px;
+		}
+	}
+	@include media-breakpoint-between(426, 767.98) {
+		aside {
+			padding-top: 630px;
+		}
+	}
+	@include media-breakpoint-down(425.98) {
+		aside {
+			padding-top: 530px;
+		}
+	}
+}
+
+.contact_form {
+	background: #FFFFFF;
+	border: 1px solid rgba($main-color, 0.2);
+	box-shadow: 2px 2px 15px rgba(128, 142, 184, 0.15);
+	border-radius: 8px;
+	text-align: center;
+
+	textarea {
+		font-family: $main-font;
+	}
+
+	@include media-breakpoint-up(1025) {
+		margin: rem(20) 0;
+	}
+	@include media-breakpoint-down(1024.98) {
+		margin: rem(20) auto;
+	}
+
+	@include media-breakpoint-up(768) {
+		padding: rem(20) rem(30);
+		max-width: 763px;
+		.fieldset {
+			display: flex;
+		}
+		.person_info {
+			margin-right: rem(20);
+			flex-basis: 360px;
+		}
+		.field_textarea{
+			flex-basis: 340px;
+			textarea {
+				height: rem(200);
+			}
+		}
+	}
+	@include media-breakpoint-between(426, 767.98) {
+		padding: rem(20) rem(20);
+		max-width: 600px;
+		.person_info {
+			span {
+				width: rem(400);
+			}
+		}
+		textarea {
+			width: rem(400);
+			height: rem(200);
+		}
+		.button {
+			width: 308px;
+		}
+	}
+	@include media-breakpoint-down(425.98) {
+		padding: rem(20) rem(10) rem(10);
+		max-width: 328px;
+		.person_info {
+			span {
+				width: rem(308);
+			}
+		}
+		textarea {
+			width: rem(308);
+			height: rem(112);
+		}
+		.button {
+			width: 308px;
+		}
+	}
+
+	.person_info {
+		.field {
+			display: inline-block;
+			text-align: left;
+			margin-bottom: rem(10);
+		}
+	}
+
+	label {
+		font-weight: 600;
+		display: inline-block;
+		margin-bottom: rem(5);
+	}
+
+	span {
+		margin-bottom: 0!important;
+	}
+
+	.field_textarea{
+		text-align: left;
+		display: inline-block;
+	}
+	.button {
+		margin-top: rem(10);
+		input {
+			color: #fff;
+			font-weight: bold;
+			text-transform: uppercase;
+			border-color: transparent;
+			background-color: transparent;
+		}
+	}
+	br {
+		display: none;
+	}
+}

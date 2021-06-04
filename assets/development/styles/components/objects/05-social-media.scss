@@ -1,0 +1,32 @@
+@import '../settings/05-mixins';
+@import '../settings/01-variables';
+/*Social media*/
+.social_media {
+	font-size: 0;
+	line-height: 1;
+
+	a {
+		display: inline-block;
+		position: relative;
+		@include circle(25px);
+		margin: 0 4px;
+		@include left-right-margin();
+		border: 1px solid #fff;
+
+		&:before {
+			font-size: 14px;
+			color: #fff;
+			@include center();
+			@include transition();
+		}
+
+		&:hover {
+			text-decoration: none;
+			background: #fff;
+
+			&:before {
+				color: $main-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+@import '../../settings/05-mixins';
+@import '../../settings/01-variables';
+
+.breadcrumbs {
+	font-size: 14px;
+	font-weight: 400;
+	color: $font-color;
+	padding: 16px 0;
+	.home {
+		text-transform: uppercase;
+	}
+}

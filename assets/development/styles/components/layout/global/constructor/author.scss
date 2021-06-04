@@ -1,0 +1,82 @@
+@import '../../../settings/05-mixins';
+@import '../../../settings/01-variables';
+
+.author {
+	h6 {
+		padding-bottom: 10px;
+	}
+
+	.author_wrap {
+		@include media-breakpoint-up(768) {
+			padding: 10px 33px 10px 30px;
+		}
+		@include media-breakpoint-down(767.98) {
+			padding: 10px 10px 20px 10px;
+		}
+		margin: 20px 0 40px;
+		background: #FFFFFF;
+		border: 1px solid rgba(73, 3, 101, 0.2);
+		box-shadow: 2px 2px 15px rgba(128, 142, 184, 0.15);
+		border-radius: 8px;
+
+		.social_media {
+			margin-top: 10px;
+			a {
+				background: none;
+				border: 1px solid $main-color;
+				&:hover {
+					background: $main-color;
+					&:before {
+						color: #fff;
+					}
+				}
+				&:before {
+					color: $main-color;
+				}
+			}
+		}
+	}
+
+	.author_info {
+		position: relative;
+		@include media-breakpoint-down(767.98) {
+			padding: 15px 5px;
+			border-bottom: 1px solid rgba($main-color, .5);
+			margin-bottom: 10px;
+		}
+		@include media-breakpoint-up(768) {
+			flex-basis: 340px;
+			padding: 18px 3% 18px 0;
+			border-right: 1px solid rgba($main-color, .5);
+		}
+
+		.author_info_img {
+			flex-basis: 80px;
+			margin-right: 18px;
+		}
+
+		.author_info_text {
+			flex: 1 1 0;
+			font-size: 18px;
+
+			span {
+				display: inline-block;
+				line-height: 1.2;
+			}
+		}
+	}
+
+	.author_text {
+		font-family: $second-font;
+		line-height: 1.25;
+		@include media-breakpoint-up(768) {
+			flex: 1 1 0;
+			padding: 7px 0 7px 2.9%;
+		}
+	}
+
+	img {
+		width: 80px;
+		border-radius: 50%;
+	}
+}

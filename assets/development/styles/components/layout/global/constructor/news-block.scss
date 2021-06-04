@@ -1,0 +1,52 @@
+@import '../../../settings/05-mixins';
+@import '../../../settings/01-variables';
+
+.news_list_wrap {
+	@include media-breakpoint-up(768) {
+		display: flex;
+		justify-content: center;
+	}
+	@include media-breakpoint-between(480, 767.98) {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	padding: rem(20) 0;
+
+
+	.news_item {
+		@include media-breakpoint-up(768) {
+			padding: rem(30) rem(12) rem(10);
+			flex-basis: 275px;
+			&:not(:last-child) {
+				margin-right: rem(20);
+			}
+		}
+		@include media-breakpoint-between(480, 767.98) {
+			padding: rem(20) rem(10) rem(5);
+			flex-basis: 200px;
+			&:not(:last-child) {
+				margin-right: rem(10);
+				margin-bottom: rem(20);
+			}
+		}
+		@include media-breakpoint-down(479.98) {
+			padding: rem(30) rem(2) rem(10);
+			margin: 0 auto;
+			width: 275px;
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
+		text-align: center;
+		border: 1px solid #490365;
+		border-radius: 20px;
+
+		figure {
+			margin-bottom: 25px;
+		}
+		img {
+			margin: 0 auto;
+		}
+	}
+}

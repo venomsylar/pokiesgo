@@ -1,0 +1,47 @@
+@import '../../../settings/05-mixins';
+@import '../../../settings/01-variables';
+.accordion {
+	padding: rem(20) 0;
+	h2 {
+		text-align: center;
+	}
+	.accordion_item {
+		border: 1px solid $main-color;
+		border-radius: 10px;
+		margin-bottom: 5px;
+	}
+	.accordion_title {
+		font-size: 16px;
+		cursor: pointer;
+		color: #ffffff;
+		padding: 13px 15px 13px 50px;
+		background: $main-color;
+		position: relative;
+		border-radius: 8px;
+		&.opened::before {
+			transform: scale(1);
+		}
+		&:before {
+			content: '';
+			width: 12px;
+			height: 6px;
+			display: block;
+		   position: absolute;
+		   top: 19px;
+		   left: 20px;
+			transform: scale(-1);
+			background-image: url("images/arrow-down.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			@include transition();
+		}
+	}
+	.accordion_items_cope_info {
+		display: none;
+	}
+	.accordion_info {
+		padding: 20px;
+		@include last-p;
+	}
+}

@@ -1,0 +1,180 @@
+@import "05-mixins";
+@import "01-variables";
+
+html {
+	font: $font-weight #{$font-base}/1.5714 $main-font, sans-serif;
+	@include media-breakpoint-down(1024.98) {
+		font-size: $font-base-responsive;
+	}
+}
+
+body {
+	color: $font-color;
+	flex-direction: column;
+	display: flex;
+	min-height: 100vh;
+	@include transition(padding-bottom, .4s, ease-in-out);
+
+	&:before {
+		content: '';
+		@include stretch(fixed);
+		opacity: 0;
+		visibility: hidden;
+		background: rgba($main-color, .95);
+		@include transition();
+	}
+
+	&.shadow {
+		overflow: hidden !important;
+
+		&:before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+#main {
+	width: 100%;
+	flex: 1 0 auto;
+}
+
+/*Add Containers*/
+@include add-container();
+/*Set Z-index*/
+@include set-z-index();
+
+img {
+	@include media-breakpoint-down(767.98) {
+		&.alignright, &.alignleft {
+			float: none;
+			margin: 0 auto 20px;
+		}
+	}
+}
+
+.flex {
+	@include responsive-flex {
+		@include flex()
+	}
+}
+
+.flex_align_center {
+	@include responsive-flex {
+		@include flex();
+		align-items: center
+	}
+}
+
+.flex_align_top {
+	@include responsive-flex {
+		@include flex();
+		align-items: flex-start
+	}
+}
+
+.flex_align_end {
+	@include responsive-flex {
+		@include flex();
+		align-items: flex-end
+	}
+}
+
+.flex_column {
+	@include responsive-flex {
+		@include flex();
+		flex-direction: column
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.cover {
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+//Fullframe (for responsive iframes)
+.fullframe {
+	height: 0;
+	overflow: hidden;
+	margin: 0;
+	padding-bottom: 56.5%;
+	position: relative;
+
+	iframe, object, embed {
+		@include rectangle(100%);
+		@include position(0, false, false, 0);
+		z-index: -1;
+		position: absolute;
+	}
+}
+
+span.svg_wrap {
+	width: 20px;
+	font-size: 0;
+	line-height: 1;
+	display: inline-block;
+	position: relative;
+
+	svg {
+		@include rectangle(20px);
+	}
+}
+
+//CONTACT FORM
+div.wpcf7 {
+	.wpcf7-form-control-wrap {
+		display: block !important;
+		margin-bottom: 20px;
+		clear: both;
+	}
+
+	.wpcf7-not-valid-tip {
+		height: $input-height;
+		font-family: $main-font;
+		text-align: left;
+		line-height: $input-height;
+		@include stretch();
+		cursor: pointer;
+		padding: 0 10px;
+		border: 1px solid #FF0000;
+		background: #fff;
+	}
+
+	.wpcf7-response-output {
+		width: 100%;
+		font-family: $main-font;
+		font-size: 12px;
+		line-height: 20px;
+		text-align: center;
+		margin: 10px 0 0 0;
+		padding: 5px 20px;
+		background: #fff;
+	}
+
+	.ajax-loader {
+		display: none;
+	}
+}
+
+/*Scroll*/
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	border-left: 1px solid #ccc;
+	background-color: #eaeaea;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $main-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: darken($main-color, 5%);
+}

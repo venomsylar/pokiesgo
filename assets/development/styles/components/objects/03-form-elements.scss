@@ -1,0 +1,136 @@
+@import '../settings/05-mixins';
+@import '../settings/01-variables';
+
+/***
+  Form elements
+ */
+input[type="text"], input[type="email"], input[type="tel"], input[type="search"], input[type="password"], textarea {
+	width: 100%;
+	height: $input-height;
+	font-size: $font-base;
+	font-weight: 400;
+	padding: 0 15px;
+	border: 1px solid rgba($main-color, 0.5);
+	border-radius: 6px;
+	@include transition();
+	background: #fff;
+
+	&:focus {
+		box-shadow: 0 0 2px 0 $main-color;
+	}
+}
+
+textarea {
+	resize: none;
+	padding: 10px;
+	border: 1px solid rgba($main-color, 0.5);
+	border-radius: 6px;
+	@include media-breakpoint-down(767.98) {
+		height: 70px;
+	}
+	@include media-breakpoint-up(768) {
+		height: 100px;
+	}
+}
+
+.form_item {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.button_parent {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: $placeholder-color;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+	color: $placeholder-color;
+	opacity: 1;
+}
+
+//SELECT
+$select-background: #fff;
+select {
+	display: none !important;
+}
+
+.select {
+	width: 100%;
+	height: $input-height;
+	font-size: $font-base;
+	font-weight: 400;
+	color: $font-color;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+
+	.select-styled {
+		line-height: $input-height;
+		@include stretch();
+		overflow: hidden;
+		border: 1px solid #ccc;
+		padding: 0 30px 0 15px;
+		background-color: $select-background;
+		@include transition();
+
+		&:after {
+			@include triangle(6px, 6px, $font-color, bottom);
+			@include center(false, true);
+			@include position(false, 14px, auto, auto);
+			@include transition();
+		}
+
+		&:hover {
+			background-color: darken($select-background, 2);
+		}
+
+		&:active, &.active {
+			background-color: darken($select-background, 5);
+
+			&:after {
+				transform: translate(0, -50%) rotateX(180deg);
+			}
+		}
+	}
+
+	.select-options {
+		display: none;
+		position: absolute;
+		border: 1px solid #ccc;
+		max-height: 150px;
+		@include position(100%, 0, false, 0);
+		margin: 0 !important;
+		padding: 0 !important;
+		list-style: none;
+		overflow-y: scroll;
+		border-top: 5px solid transparent;
+
+		li {
+			font-size: $font-base - 2;
+			margin: 0;
+			padding: 6px 15px !important;
+			@include transition();
+			background-color: darken($select-background, 1);
+
+			&:hover {
+				background: #eee;
+			}
+
+			&[rel="hide"] {
+				display: none;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&::-webkit-scrollbar {
+			width: 3px !important;
+		}
+	}
+}

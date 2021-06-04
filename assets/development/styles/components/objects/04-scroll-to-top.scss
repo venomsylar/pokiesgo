@@ -1,0 +1,42 @@
+@import '../settings/05-mixins';
+@import '../settings/01-variables';
+/*Scroll to top*/
+#to_top {
+	opacity: 0;
+	visibility: hidden;
+	@include transition();
+
+	a {
+		color: $color1;
+		@include media-breakpoint-up(1025) {
+			@include circle(50px);
+			font-size: 20px;
+		}
+		@include media-breakpoint-down(1024.98) {
+			@include circle(30px);
+			font-size: 16px;
+		}
+		display: inline-block;
+		position: fixed;
+		@include position(false, 15px, 15px, false);
+		border: 2px solid $color1;
+		background: transparent;
+		&:before {
+			@include center();
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		@include hover {
+			background-color: $color1;
+			color: #fff;
+		}
+	}
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}

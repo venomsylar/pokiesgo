@@ -1,0 +1,44 @@
+@import '../../../settings/05-mixins';
+@import '../../../settings/01-variables';
+
+.advantages_list_wrap {
+	padding: rem(20) 0;
+	@include media-breakpoint-up(768) {
+		display: flex;
+		justify-content: center;
+	}
+	@include media-breakpoint-between(426, 767.98) {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
+
+	.advantage_item {
+		@include media-breakpoint-up(768) {
+			flex-basis: 180px;
+			&:not(:last-child) {
+				margin-right: rem(40);
+			}
+		}
+		@include media-breakpoint-between(426, 767.98) {
+			flex-basis: 130px;
+			&:not(:last-child) {
+				margin-right: rem(20);
+				margin-bottom: rem(20);
+			}
+		}
+		@include media-breakpoint-down(425.98) {
+			width: 186px;
+			margin: 0 auto;
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
+		figure {
+			margin-bottom: rem(20);
+		}
+		img {
+			margin: 0 auto;
+		}
+	}
+}

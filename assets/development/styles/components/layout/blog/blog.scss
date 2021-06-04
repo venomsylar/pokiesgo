@@ -1,0 +1,70 @@
+@import '../../settings/05-mixins';
+@import '../../settings/01-variables';
+
+#blog {
+	padding-bottom: rem(80);
+	h1 {
+		text-align: left;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.post {
+		margin-bottom: 40px;
+		h3 {
+			font-size: 24px;
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 1.1;
+			padding-bottom: 10px;
+			a {
+				color: $font-color;
+				text-decoration: none;
+				&:hover {
+					color: $main-color;
+				}
+			}
+		}
+	}
+}
+
+.post_box {
+	&.post_info {
+		margin-bottom: 40px;
+	}
+	.post_top_info_additional {
+		@include media-breakpoint-up(768) {
+			display: flex;
+			align-items: center;
+		}
+		margin-bottom: 20px;
+		line-height: 1;
+	}
+	.post_thumbnail {
+		flex-basis: 274px;
+		margin-right: 20px;
+		&:hover {
+			opacity: .8;
+		}
+		img {
+			border-radius: 10px;
+		}
+	}
+	.trim {
+		flex: 1 1 0;
+		padding-bottom: 0;
+	}
+
+	.post_author, .post_rating {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 20px;
+	}
+	time, .stars_rating {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.post_author, time, .post_rating {
+		font-size: 13px;
+		font-weight: 600;
+	}
+}

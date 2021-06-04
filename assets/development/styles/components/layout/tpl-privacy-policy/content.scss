@@ -1,0 +1,79 @@
+@import '../../settings/05-mixins';
+@import '../../settings/01-variables';
+
+.privacy-policy {
+	h1 {
+		font-size: 32px;
+		text-align: left;
+		padding-bottom: 20px;
+	}
+	h2 {
+		text-transform: uppercase;
+	}
+	ol {
+		ul {
+			margin-bottom: 0 !important;
+			@include media-breakpoint-down(1024.98) {
+				margin-left: 3px !important;
+			}
+			@include media-breakpoint-up(1025) {
+				margin-left: 50px;
+			}
+			li {
+				@include media-breakpoint-up(1025) {
+					padding-left: 16px !important;
+					&:before {
+						top: 15px !important;
+					}
+				}
+				@include media-breakpoint-between(768, 1024.98) {
+					padding-left: 10px !important;
+					&:before {
+						top: 13px !important;
+					}
+				}
+				@include media-breakpoint-down(1024.98) {
+					padding-left: 10px !important;
+					&:before {
+						left: 0!important;
+						top: 13px !important;
+					}
+				}
+			}
+		}
+		li {
+			padding-bottom: 10px;
+
+			&:before {
+				top: 1px !important;
+			}
+
+			ol > li {
+				&::before {
+					top: 0!important;
+				}
+			}
+
+			@include media-breakpoint-down(767.98) {
+				padding-left: 20px;
+				li {
+					padding-left: 10px !important;
+					&:before {
+						left: -20px;
+					}
+				}
+			}
+
+			ol {
+				@include media-breakpoint-up(1025) {
+					padding-left: 98px!important;
+				}
+			}
+
+			h2, h3 {
+				padding-bottom: 5px;
+			}
+		}
+	}
+}
+
