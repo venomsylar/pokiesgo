@@ -20,6 +20,12 @@ remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
 
+
+add_action( 'after_setup_theme', function() {
+	get_template_part( 'inc/classes/Updater' );
+});
+
+
 add_action('widgets_init', 'venom_remove_recent_comments_style');
 
 function venom_remove_recent_comments_style()

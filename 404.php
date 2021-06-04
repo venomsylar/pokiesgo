@@ -13,8 +13,7 @@
 			   'custom' => false,
 			   'title' => 'Or start playing your favourite games in these safe and secure online casinos:',
 			   'index' => 1
-	   ]);
-	   ?>
+	   ]); ?>
    </div>
 </div>
 <?php get_footer(); ?>
