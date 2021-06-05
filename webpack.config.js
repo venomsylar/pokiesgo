@@ -1,6 +1,6 @@
 let path = require('path');
 let Encore = require('@symfony/webpack-encore');
-let themeName = 'casino777';
+let themeName = 'pokiesgo-main';
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 Encore
 		.setOutputPath(path.join(__dirname, 'assets/dist'))

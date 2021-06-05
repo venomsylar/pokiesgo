@@ -2,31 +2,31 @@
   "entrypoints": {
     "404": {
       "js": [
-        "/wp-content/themes/casino777/assets/dist/runtime.a873cd38.js",
-        "/wp-content/themes/casino777/assets/dist/404.4ba30b13.js"
+        "/wp-content/themes/pokiesgo-main/assets/dist/runtime.979b4cea.js",
+        "/wp-content/themes/pokiesgo-main/assets/dist/404.4ba30b13.js"
       ],
       "css": [
-        "/wp-content/themes/casino777/assets/dist/404.e581a06c.css"
+        "/wp-content/themes/pokiesgo-main/assets/dist/404.e581a06c.css"
       ]
     },
     "main": {
       "js": [
-        "/wp-content/themes/casino777/assets/dist/runtime.a873cd38.js",
-        "/wp-content/themes/casino777/assets/dist/0.78ef8676.js",
-        "/wp-content/themes/casino777/assets/dist/main.c409fc63.js"
+        "/wp-content/themes/pokiesgo-main/assets/dist/runtime.979b4cea.js",
+        "/wp-content/themes/pokiesgo-main/assets/dist/0.78ef8676.js",
+        "/wp-content/themes/pokiesgo-main/assets/dist/main.c409fc63.js"
       ],
       "css": [
-        "/wp-content/themes/casino777/assets/dist/0.6dec65dd.css",
-        "/wp-content/themes/casino777/assets/dist/main.d26fcfd3.css"
+        "/wp-content/themes/pokiesgo-main/assets/dist/0.6dec65dd.css",
+        "/wp-content/themes/pokiesgo-main/assets/dist/main.a69e0e10.css"
       ]
     },
     "casino": {
       "js": [
-        "/wp-content/themes/casino777/assets/dist/runtime.a873cd38.js",
-        "/wp-content/themes/casino777/assets/dist/casino.bc438931.js"
+        "/wp-content/themes/pokiesgo-main/assets/dist/runtime.979b4cea.js",
+        "/wp-content/themes/pokiesgo-main/assets/dist/casino.bc438931.js"
       ],
       "css": [
-        "/wp-content/themes/casino777/assets/dist/casino.5d0ebdd2.css"
+        "/wp-content/themes/pokiesgo-main/assets/dist/casino.5d0ebdd2.css"
       ]
     }
   }
