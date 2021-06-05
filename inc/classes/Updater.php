@@ -60,6 +60,10 @@ class Updater {
 	 * @var array
 	 */
 	private $response;
+	/**
+	 * @var mixed
+	 */
+	private $ver;
 
 	/**
 	 * Constructor.
@@ -76,6 +80,7 @@ class Updater {
 		$this->url  = $args['url'];
 
 		$this->response = $this->get_response();
+
 		// Check for theme updates.
 		add_filter( 'http_request_args', [ $this, 'update_check' ], 5, 2 );
 		// Inject theme updates into the response array.
@@ -108,6 +113,7 @@ class Updater {
 			return $cache;
 		}
 		$response = wp_remote_get( $this->get_releases_url() );
+
 		if ( ! is_wp_error( $response ) && 200 === wp_remote_retrieve_response_code( $response ) ) {
 			$response = json_decode( wp_remote_retrieve_body( $response ), true );
 			set_site_transient( md5( $this->get_releases_url() ), $response, 12 * HOUR_IN_SECONDS );
@@ -177,8 +183,10 @@ class Updater {
 	 * @return object
 	 */
 	public function update_themes( $transient ) {
+
 		if ( isset( $transient->checked ) ) {
 			$current_version = $this->ver;
+
 
 			if ( version_compare( $current_version, $this->get_latest_version(), '<' ) ) {
 				$transient->response[ $this->name ] = [
@@ -201,6 +209,6 @@ new Updater(
 				'repo' => 'venomsylar/pokiesgo',             // Theme repository.
 				'slug' => 'pokiesgo',                     // Theme Slug.
 				'url'  => 'https://github.com/venomsylar/pokiesgo', // Theme URL.
-				'ver'  => 1.3                        // Theme Version.
+				'ver'  => 1.2                        // Theme Version.
 		]
 );
