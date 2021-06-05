@@ -1,5 +1,4 @@
-<?php
-// phpcs:disable WordPress.Files.FileName
+<?php // phpcs:disable WordPress.Files.FileName
 /**
  * Gridd Theme Updater.
  *
@@ -72,16 +71,14 @@ class Updater {
 	public function __construct( $args ) {
 		$this->name = $args['name'];
 		$this->slug = $args['slug'];
-        $this->repo = $args['repo'];
-        $this->ver  = $args['ver'];
+		$this->repo = $args['repo'];
+		$this->ver  = $args['ver'];
 		$this->url  = $args['url'];
 
 		$this->response = $this->get_response();
-
 		// Check for theme updates.
 		add_filter( 'http_request_args', [ $this, 'update_check' ], 5, 2 );
 		// Inject theme updates into the response array.
-
 		add_filter( 'pre_set_site_transient_update_themes', [ $this, 'update_themes' ] );
 		add_filter( 'pre_set_transient_update_themes', [ $this, 'update_themes' ] );
 	}
@@ -94,7 +91,7 @@ class Updater {
 	 * @return string
 	 */
 	private function get_releases_url() {
-		return 'https://api.github.com/repos/' . $this->repo . '/releases/latest';
+		return 'https://api.github.com/repos/' . $this->repo . '/releases';
 	}
 
 	/**
@@ -113,11 +110,8 @@ class Updater {
 		$response = wp_remote_get( $this->get_releases_url() );
 		if ( ! is_wp_error( $response ) && 200 === wp_remote_retrieve_response_code( $response ) ) {
 			$response = json_decode( wp_remote_retrieve_body( $response ), true );
-
 			set_site_transient( md5( $this->get_releases_url() ), $response, 12 * HOUR_IN_SECONDS );
-			return $response;
 		}
-		return $response;
 	}
 
 	/**
@@ -131,12 +125,11 @@ class Updater {
 		if ( ! $this->response ) {
 			return;
 		}
-		$release = $this->response;
-
-		if ( isset( $release['zipball_url'] )) {
-			return $release['zipball_url'];
+		foreach ( $this->response as $release ) {
+			if ( isset( $release['assets'] ) && isset( $release['assets'][0] ) && isset( $release['assets'][0]['browser_download_url'] ) ) {
+				return $release['assets'][0]['browser_download_url'];
+			}
 		}
-		return;
 	}
 
 	/**
@@ -167,7 +160,6 @@ class Updater {
 	 * @return array
 	 */
 	public function update_check( $request, $url ) {
-
 		if ( false !== strpos( $url, '//api.wordpress.org/themes/update-check/1.1/' ) ) {
 			$data = json_decode( $request['body']['themes'] );
 			unset( $data->themes->{$this->slug} );
@@ -185,16 +177,15 @@ class Updater {
 	 * @return object
 	 */
 	public function update_themes( $transient ) {
-
 		if ( isset( $transient->checked ) ) {
 			$current_version = $this->ver;
 
 			if ( version_compare( $current_version, $this->get_latest_version(), '<' ) ) {
 				$transient->response[ $this->name ] = [
-					'theme'       => $this->name,
-					'new_version' => $this->get_latest_version(),
-					'url'         => 'https://github.com/' . $this->repo . '/releases',
-					'package'     => $this->get_latest_package(),
+						'theme'       => $this->name,
+						'new_version' => $this->get_latest_version(),
+						'url'         => 'https://github.com/' . $this->repo . '/releases',
+						'package'     => $this->get_latest_package(),
 				];
 			}
 		}
@@ -203,12 +194,13 @@ class Updater {
 }
 
 
+
 new Updater(
 		[
 				'name' => 'PokiesGo',                     // Theme Name.
 				'repo' => 'venomsylar/pokiesgo',             // Theme repository.
 				'slug' => 'pokiesgo',                     // Theme Slug.
 				'url'  => 'https://github.com/venomsylar/pokiesgo', // Theme URL.
-				'ver'  => 1.1                        // Theme Version.
+				'ver'  => 1.3                        // Theme Version.
 		]
 );
