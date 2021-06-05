@@ -184,7 +184,7 @@ class Updater {
 	 */
 	public function update_themes( $transient ) {
 
-		if ( isset( $transient->checked ) ) {
+		if ( isset( $transient->checked ) || isset( $transient->last_checked ) ) {
 			$current_version = $this->ver;
 
 
@@ -209,6 +209,6 @@ new Updater(
 				'repo' => 'venomsylar/pokiesgo',             // Theme repository.
 				'slug' => 'pokiesgo',                     // Theme Slug.
 				'url'  => 'https://github.com/venomsylar/pokiesgo', // Theme URL.
-				'ver'  => 1.4                        // Theme Version.
+				'ver'  => 1.5                        // Theme Version.
 		]
 );
