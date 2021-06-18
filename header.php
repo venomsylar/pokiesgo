@@ -15,6 +15,7 @@
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <?php wp_head(); ?>
+	<?php get_template_part('template-parts/global/header/microlayouts/index'); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php get_template_part('template-parts/global/header/head/tag-manager/tag-manager-second-part'); ?>

@@ -1,6 +1,7 @@
 <?php
 $rating = get_field('rating');
 $short_description = get_field('short_description');
+global $post;
 ?>
 
 <div class="post_info post_box">
@@ -13,10 +14,9 @@ $short_description = get_field('short_description');
 				</div>
 			</div>
 		<?php }
-		$author = get_field('author');
-		if($author) { ?>
-			<span class="post_author">By : <?php echo $author['name'] ?></span>
-		<?php } ?>
+		$author_user_firstname = get_the_author_meta('user_firstname', $post->post_author);
+		$author_user_lastname = get_the_author_meta('user_lastname', $post->post_author); ?>
+		<span class="post_author">By : <?php echo $author_user_firstname. ' ' . $author_user_lastname ?></span>
 		<time datetime="<?php echo get_the_date('Y-m-d'); ?>">Published : <?php echo get_the_date(get_option('date_format_custom')); ?></time>
 	</div>
 	<div class="post_bottom_info flex_md">

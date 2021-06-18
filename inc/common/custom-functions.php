@@ -501,3 +501,16 @@ function table_filter_controller($data, $sorting, $filter_data) {
 		'data' => $result
 	];
 }
+
+function filter_casinos_by_author($id, $table_ids) {
+	global $wpdb;
+	$table_name = $wpdb->prefix . 'posts';
+	$result = $wpdb->get_results($wpdb->prepare("
+		SELECT ID FROM $table_name
+		WHERE post_author = '%s' AND post_type = 'casino' AND ID IN(".implode(', ', array_fill(0, count($table_ids), '%s')).")
+	", $id, ...$table_ids), ARRAY_A);
+	if ($result) {
+		return wp_list_pluck( $result, 'ID' );
+	}
+	return [];
+}

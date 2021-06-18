@@ -3,10 +3,9 @@
 		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 		<div class="post_top_info_additional">
 			<?php
-			$author = get_field('author');
-			if($author) { ?>
-				<span class="post_author">By : <?php echo $author['name'] ?></span>
-			<?php } ?>
+			$author_user_firstname = get_the_author_meta('user_firstname');
+			$author_user_lastname = get_the_author_meta('user_lastname'); ?>
+			<span class="post_author">By : <?php echo $author_user_firstname. ' ' . $author_user_lastname ?></span>
 			<time datetime="<?php echo get_the_date('Y-m-d'); ?>">Published : <?php echo get_the_date(get_option('date_format_custom')); ?></time>
 		</div>
 	</div>
@@ -14,7 +13,7 @@
 	    <?php if (has_post_thumbnail()) { ?>
 		    <a class="post_thumbnail" href="<?php the_permalink(); ?>">
 			    <?php $alt = venom_attachment_alt_attr(get_post_thumbnail_id()); ?>
-			    <img src="<?php echo get_the_post_thumbnail_url(null, '328x175'); ?>" alt="<?php echo $alt ? $alt : get_the_title(); ?>">
+			    <img src="<?php echo get_the_post_thumbnail_url(null, '328x175'); ?>" alt="<?php echo $alt ? : get_the_title(); ?>">
 		    </a>
 	    <?php } else {
 		    $holder = get_field('default_image', 'option'); ?>

@@ -2,20 +2,12 @@
 @import '../../../settings/01-variables';
 
 .content_block {
-	padding: rem(20) 0;
-
 	.content_button {
 		font-size: 16px;
 		color: $main-color;
 		display: inline-block;
 		font-weight: 800;
 		cursor: pointer;
-	}
-
-	.content_block_first_part {
-		p:last-of-type {
-			padding-bottom: 0;
-		}
 	}
 
 	.content_block_second_part {

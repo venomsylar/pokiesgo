@@ -6,6 +6,7 @@ $hide_payments = get_data_from_template('hide_payments', $args);
 $constructor_index = get_data_from_template('index', $args);
 $custom_table = get_data_from_template('custom', $args);
 $all_casino_link = get_data_from_template('all-casino-link', $args);
+$show_all = get_data_from_template('show-all', $args);
 $table = [];
 $index = 1;
 $hidden_index = get_field('hide_rows_after', 'options');
@@ -17,7 +18,11 @@ if ($custom_table) {
     $table = $custom_table;
 } elseif(is_tax()) {
     $table = get_table_for_taxonomy_page($all_casinos_table);
-} else {
+} elseif (is_author()) {
+	global $author;
+	$table = filter_casinos_by_author($author, $all_casinos_table);
+}
+else {
     $table = $all_casinos_table;
 }
 //Add Top 3 block
@@ -28,6 +33,7 @@ if ($top3) {
     $index = 4;
     $hidden_index = $hidden_index - 3;
 }
+
 
 //Return Table
 if ($table) { ?>
@@ -62,10 +68,12 @@ if ($table) { ?>
                 <tbody>
                 <?php
                 $hidden = false;
-                $index_for_hidden_row = 1;
+                $index_for_hidden_row = 0;
                 foreach($table as $table_item):
-	                if($page_id !== $table_item) {
-		                $index_for_hidden_row > $hidden_index ? $hidden = true : false;
+	                if($page_id !== $table_item && (get_post_status($page_id) === 'publish' || is_author())) {
+	                	if (!$show_all) {
+			                $index_for_hidden_row >= $hidden_index && $hidden = true;
+		                }
 		                get_template_part('template-parts/global/constructor/constructor-parts/table/table-item', 'table-item', [
 				                'table-item' => $table_item,
 			                    'highlighted' => !$top3 && $index < 4,
@@ -86,7 +94,7 @@ if ($table) { ?>
 			                <a href="<?php echo site_url() . '/online-casinos/' ?>">All casino</a>
 		                <?php } ?>
 	                </td>
-	                <?php if(count($table) > $hidden_index) { ?>
+	                <?php if(count($table) > $hidden_index && !$show_all) { ?>
 		                <td data-count="<?php echo $hidden_index ?>" class="expand_table i-angle-down">
 			                More casino
 		                </td>

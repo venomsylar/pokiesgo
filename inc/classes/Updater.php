@@ -116,7 +116,7 @@ class Updater {
 
 		if ( ! is_wp_error( $response ) && 200 === wp_remote_retrieve_response_code( $response ) ) {
 			$response = json_decode( wp_remote_retrieve_body( $response ), true );
-			set_site_transient( md5( $this->get_releases_url() ), $response, 12 * HOUR_IN_SECONDS );
+			set_site_transient( md5( $this->get_releases_url() ), $response, 2 * HOUR_IN_SECONDS );
 		}
 	}
 
@@ -201,14 +201,12 @@ class Updater {
 	}
 }
 
-
-
 new Updater(
 		[
 				'name' => 'PokiesGo',                     // Theme Name.
 				'repo' => 'venomsylar/pokiesgo',             // Theme repository.
 				'slug' => 'pokiesgo',                     // Theme Slug.
 				'url'  => 'https://github.com/venomsylar/pokiesgo', // Theme URL.
-				'ver'  => 1.8                        // Theme Version.
+				'ver'  => 1.9                        // Theme Version.
 		]
 );

@@ -41,6 +41,7 @@ if (is_array($constructor)) {
                         'custom' => false,
                         'title' => $constructor_item['title'],
                         'all-casino-link' => $constructor_item['all_casino_link'],
+	                    'show-all' => $constructor_item['show_all'],
                         'index' => $index
                     ]);
                 break;
@@ -51,6 +52,7 @@ if (is_array($constructor)) {
                         'custom' => false,
                         'title' => $constructor_item['title'],
 	                    'all-casino-link' => $constructor_item['all_casino_link'],
+                        'show-all' => $constructor_item['show_all'],
                         'index' => $index
                     ]);
                 break;
@@ -61,6 +63,7 @@ if (is_array($constructor)) {
                         'custom' => $constructor_item['custom_table'],
                         'title' => $constructor_item['title'],
 	                    'all-casino-link' => $constructor_item['all_casino_link'],
+	                    'show-all' => $constructor_item['show_all'],
                         'index' => $index
                     ]
                 );
@@ -72,6 +75,7 @@ if (is_array($constructor)) {
 				        'all-casino-link' => $constructor_item['all_casino_link'],
 				        'index' => $index,
 				        'filter' => $constructor_item['filter'],
+				        'show-all' => $constructor_item['show_all'],
 				        'custom' => $constructor_item['custom_table'] && $constructor_item['use_table_type'] === 'custom' ? $constructor_item['custom_table'] : null
 			        ]
 		        );
@@ -144,12 +148,12 @@ if (is_array($constructor)) {
                 ]);
                 break;
 	        case 'author' :
-		        get_template_part('/template-parts/global/constructor/constructor-parts/author', null, [
-			        'photo' => $constructor_item['photo'],
-			        'name' => $constructor_item['name'],
-			        'position' => $constructor_item['position'],
-			        'text' => $constructor_item['text'],
-			        'social' => $constructor_item['some']
+		        get_template_part('/template-parts/global/constructor/constructor-parts/author', null);
+		        break;
+	        case 'call_to_action' :
+		        get_template_part('/template-parts/global/constructor/constructor-parts/call-to-action', null, [
+			        'button_text' => $constructor_item['button_text'],
+			        'casino_id' => $constructor_item['casino']
 		        ]);
 		        break;
             default :

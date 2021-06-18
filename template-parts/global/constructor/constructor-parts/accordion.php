@@ -42,14 +42,14 @@ if(is_array($list)) { ?>
     <section class="accordion">
         <div class="container">
 	        <?php echo $heading ? '<h2 id="'.$heading_id.'">'.$heading.'</h2>' : '';
-	        echo $subtitle ? $subtitle : '';
+	        echo $subtitle ?: '';
 	        if($accordion_schema_type) { ?>
-	        <dl class="accordion_wrap">
+	        <dl class="accordion_wrap" itemscope itemtype="https://schema.org/FAQPage">
 		        <?php foreach($list as $item):
 			        $title = $item['title'];
 			        $info = $item['info']; ?>
 		        <dt class="accordion_item">
-				        <div class="accordion_item_type" itemscope itemtype="https://schema.org/FAQPage">
+				        <div class="accordion_item_type">
 					        <div class="accordion_items_cope" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 						        <div class="accordion_itemprop" itemprop="name">
 							        <h5 class="accordion_title"><?php echo $title ?></h5>

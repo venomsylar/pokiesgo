@@ -4,7 +4,7 @@ $rating_value = get_post_meta($id, 'g_rating_value', true) ? get_post_meta($id, 
 if (get_field('rating_on', $id)) {?>
     <script type="application/ld+json">
         {
-            "@context": "http://schema.org/",
+            "@context": "https://schema.org/",
             "@type": "Review",
             "itemReviewed": {
                 "@type": "Thing",

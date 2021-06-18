@@ -10,7 +10,7 @@ const tableExpand = () => {
 			$(this).text('Less casino');
 		}
 		$(this).parent().parent().find('tr:not(.table_buttons_wrap)').each(function(index, element) {
-			if(index > expandCount){
+			if(index >= expandCount){
 				$(this).toggleClass('hidden_row');
 				$(this).next('.table_spacer').toggleClass('hidden_row');
 			}

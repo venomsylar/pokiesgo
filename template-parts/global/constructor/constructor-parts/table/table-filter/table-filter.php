@@ -24,10 +24,10 @@ function table_filtering() {
 	<tbody>
 	<?php
 	$hidden = false;
-	$index_for_hidden_row = 1;
+	$index_for_hidden_row = 0;
 	foreach($result['data'] as $table_item):
 		if($page_id !== $table_item) {
-			$index_for_hidden_row > $hidden_index && $hidden = true;
+			$index_for_hidden_row >= $hidden_index && $hidden = true;
 			get_template_part('template-parts/global/constructor/constructor-parts/table/table-item', 'table-item', [
 					'table-item' => $table_item,
 					'highlighted' => $index < 4,

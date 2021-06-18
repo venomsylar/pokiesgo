@@ -8,12 +8,7 @@
 			$author_block = get_field('author');
 			get_template_part('template-parts/post/post-info');
 			get_template_part('template-parts/post/post-content');
-			get_template_part('/template-parts/global/constructor/constructor-parts/author', null, [
-					'photo' => $author_block['photo'],
-					'name' => $author_block['name'],
-					'position' => $author_block['position'],
-					'text' => $author_block['bio'],
-			]);
+			get_template_part('/template-parts/global/constructor/constructor-parts/author', null);
 			get_template_part('/template-parts/global/constructor/constructor-parts/table/table', null,
 				[
 					'top-3' => false,

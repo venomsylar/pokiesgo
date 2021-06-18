@@ -36,7 +36,11 @@ if (is_array($constructor)) {
             case 'news_block';
             case 'advantages';
             case 'all_bonus_list': break;
-            default : $constructor_toc_headings[$index][0] = $constructor_item['title'];
+            default : {
+            	if ($constructor_item['title']) {
+		            $constructor_toc_headings[$index][0] = $constructor_item['title'];
+	            }
+            }
         }
         $index++;
     }
@@ -91,7 +95,11 @@ if (count($toc_headings) > 0) { ?>
 					        ?>
 				        <?php endforeach; ?>
 			        </ul>
-			        <button class="toc_show_toggle hide">Show more</button>
+			        <?php
+			            if ($index_for_hide > 5) { ?>
+				            <button class="toc_show_toggle hide">Show more</button>
+			            <?php }
+			        ?>
 		        </div>
 	        </div>
         </div>

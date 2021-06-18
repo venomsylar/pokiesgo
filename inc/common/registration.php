@@ -98,7 +98,7 @@ if (function_exists('acf_add_options_page')) {
  */
 
 if(class_exists('CustomPostType')) {
-    new CustomPostType('Casino', 'casino', 'dashicons-money-alt', false, true, ['title', 'thumbnail']);
+    new CustomPostType('Casino', 'casino', 'dashicons-money-alt', false, true, ['title', 'thumbnail', 'author']);
 }
 if (class_exists('CustomTaxonomy')) {
     new CustomTaxonomy('casino', 'Category', 'casino-category', true);
