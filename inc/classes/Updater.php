@@ -207,6 +207,6 @@ new Updater(
 				'repo' => 'venomsylar/pokiesgo',             // Theme repository.
 				'slug' => 'pokiesgo',                     // Theme Slug.
 				'url'  => 'https://github.com/venomsylar/pokiesgo', // Theme URL.
-				'ver'  => 1.9                        // Theme Version.
+				'ver'  => 2.0                        // Theme Version.
 		]
 );

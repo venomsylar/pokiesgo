@@ -70,7 +70,7 @@ if ($table) { ?>
                 $hidden = false;
                 $index_for_hidden_row = 0;
                 foreach($table as $table_item):
-	                if($page_id !== $table_item && (get_post_status($page_id) === 'publish' || is_author())) {
+	                if($page_id !== $table_item) {
 	                	if (!$show_all) {
 			                $index_for_hidden_row >= $hidden_index && $hidden = true;
 		                }
