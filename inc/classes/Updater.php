@@ -147,13 +147,14 @@ class Updater {
 	 */
 	private function get_latest_version() {
 		if ( ! $this->response ) {
-			return;
+			return '9999';
 		}
 		foreach ( $this->response as $release ) {
 			if ( isset( $release['tag_name'] ) ) {
 				return str_replace( 'v', '', $release['tag_name'] );
 			}
 		}
+		return '9999';
 	}
 
 	/**
@@ -185,10 +186,10 @@ class Updater {
 	public function update_themes( $transient ) {
 
 		if ( isset( $transient->checked ) || isset( $transient->last_checked ) ) {
-			$current_version = $this->ver;
+			$current_version = floatval($this->ver);
+			$latest_version = floatval($this->get_latest_version());
 
-
-			if ( version_compare( $current_version, $this->get_latest_version(), '<' ) ) {
+			if ( version_compare( $current_version, $latest_version, '<' ) ) {
 				$transient->response[ $this->name ] = [
 						'theme'       => $this->name,
 						'new_version' => $this->get_latest_version(),
@@ -207,6 +208,6 @@ new Updater(
 				'repo' => 'venomsylar/pokiesgo',             // Theme repository.
 				'slug' => 'pokiesgo',                     // Theme Slug.
 				'url'  => 'https://github.com/venomsylar/pokiesgo', // Theme URL.
-				'ver'  => 2.0                        // Theme Version.
+				'ver'  => 2.1                        // Theme Version.
 		]
 );
