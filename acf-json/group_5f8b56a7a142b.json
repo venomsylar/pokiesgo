@@ -146,7 +146,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "26",
                 "class": "",
                 "id": ""
             },
@@ -160,6 +160,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_6129085832089",
+            "label": "Current Language Href Lang",
+            "name": "current_language_hreflang",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "24",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_60918046e36e1",
@@ -300,5 +319,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620148321
+    "modified": 1630079253
 }
